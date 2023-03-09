@@ -1,0 +1,140 @@
+@import '../utils/variables';
+
+
+/*Nuestro Equipo*/
+.about-us {
+    background: $gray-1;
+
+      /*Nuestro Equipo titulo*/
+  &__title{
+    @include subtitle();
+    padding-top: 84px;
+  }
+
+   /*Nuestro Equipo iconos redes sociales*/
+   &__svg {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+  }
+  
+  /*Nuestro Equipo iconos redes sociales*/
+  &__svg:hover {
+    background-color: $main-color;
+    cursor: pointer;
+  }
+  
+  /*Nuestro Equipo iconos redes sociales*/
+  &__svg-item {
+    fill: $gray-2;
+  }
+  
+  /*Nuestro Equipo iconos redes sociales*/
+  &__svg:hover &__svg-item{
+    fill: $primary-white-color;
+  }
+  
+}
+  
+  /*Nuestro Equipo*/
+  .about-us-list {
+    @include display();
+    gap: 30px;
+    padding: 50px 215px 104px 215px;
+
+      /*Nuestro Equipo lista*/
+  &__item {
+    background-color: $primary-white-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+    /*Nuestro Equipo nombre*/
+    &__name {
+        color: $second-color;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        padding-top: 30px;
+      }
+      
+      /*Nuestro Equipo la profesion*/
+      &__profesion {
+        color: $third-color;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        padding-top: 10px;
+        padding-bottom: 16px;
+      }
+}
+  
+  /*Nuestro Equipo iconos redes sociales*/
+  .about-us-list__svg{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+  }
+  
+  @media only screen and (min-width: 767.98px) and (max-width:1199.98px){
+
+    .about-us-list{
+      flex-wrap: wrap;
+      padding: 30px 15px 60px 15px;
+    }
+
+    .about-us__title{
+      padding-top: 60px;
+    }
+
+    .about-us-list__item{
+      width: 354px;
+    }
+
+    .about-us-list__item img{
+      width: 354px;
+    }
+
+    .about-us-list__svg{
+      gap: 10px;
+      padding-bottom: 30px;
+      padding-left: 74px;
+    }
+  }
+  
+  @media only screen and (min-width: 479.98px) and (max-width:767.97px){
+
+
+    .about-us-list{
+      flex-wrap: wrap;
+      padding: 30px 15px 60px 15px;
+    }
+
+    .about-us__title{
+      padding-top: 60px;
+    }
+
+    .about-us-list__item{
+      width: 450px;
+    }
+
+    .about-us-list__item img{
+      width: 450px;
+    }
+
+    .about-us-list__svg{
+      gap: 10px;
+      padding-bottom: 30px;
+      padding-left: 122px;
+    }
+
+  }

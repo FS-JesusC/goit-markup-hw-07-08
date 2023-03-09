@@ -1,0 +1,44 @@
+@import '../utils/variables';
+
+
+/*Imagenes portafolio p */
+.portafolio-images__card {
+    padding: 20px 0px;
+  }
+  
+  /* Imagenes portafolio texto emergente*/
+  .portafolio-images__card-emergent {
+    position: absolute;
+    top: 0;
+    height: 294px;
+    width: inherit;
+    background: rgba(33, 150, 243, 0.9);
+    letter-spacing: 0.03em;
+    color: $primary-white-color;
+    transform: translateY(105%);
+    transition: transform 250ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Imagenes portafolio texto emergente*/
+  .portafolio-images__list:hover .portafolio-images__card-emergent {
+    transform: translateY(0%);
+  }
+  
+  /* Imagenes portafolio texto emergente*/
+  .portafolio-images__card-image {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Imagenes portafolio texto emergente*/
+  .portafolio-images__card-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 45px 25px;
+  }
+  
+ 

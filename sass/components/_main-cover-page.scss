@@ -1,0 +1,97 @@
+@import '../utils/variables';
+
+
+/*Seccion titulo principal, imagen de portada principal*/
+.main-cover-page {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(310deg, #0000005d, #2f303a94),
+    url("./images-css/imagenfondo.jpg");
+    background-size: 100% 600px;
+
+    &__title{
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 60px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        color: $primary-white-color;
+        padding: 200px 310px 0px 310px;
+      }
+
+      &__button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: $primary-white-color;
+        margin-top: 48px;
+        width: 225px;
+        height: 55px;
+        cursor: pointer;
+        background: $main-color;
+        border-radius: 4px;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      }
+
+      &__button:hover {
+        background: $accent-color-hover;
+      }
+  }
+  
+  /* Rehacer la ruta hacia la imagen 2x
+    si la densidad de la pantalla es al menos 2 */
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+.main-cover-page{
+  background-image: url('./images-css/imagenfondo@2x.jpg');
+}
+}
+
+  @media only screen and (min-width: 767.98px) and (max-width:1199.98px){
+
+      .main-cover-page{
+        height: 400px;
+        background-size: 100% 400px;
+      }
+
+    .main-cover-page__title{
+      font-size: 26px;
+      line-height: 1.61;
+      padding: 118px 204px 0px 204px;
+    }
+
+    .main-cover-page__button{
+      width: 220px;
+      height: 50px;
+      margin-top: 40px;
+    }
+
+  }
+
+  @media only screen and (min-width: 479.98px) and (max-width:767.97px){
+
+    .main-cover-page{
+      height: 320px;
+      background-size: 100% 320px;
+    }
+
+    .main-cover-page__title{
+      font-size: 26px;
+      line-height: 1.61;
+      padding: 90px 60px 0px 60px;
+    }
+
+    .main-cover-page__button{
+      width: 220px;
+      height: 50px;
+      margin-top: 30px;
+    }
+  }
+
+  
+  

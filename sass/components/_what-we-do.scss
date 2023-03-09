@@ -1,0 +1,51 @@
+@import '../utils/variables';
+
+
+/* A que nos dedicamos*/
+.what-we-do-list{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 94px;
+    padding: 55px 86px 0px 86px;
+    position: relative;
+
+      /*A que nos dedicamos*/
+  &_text{
+    background: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    width: 373px;
+    color: $primary-white-color;
+    padding: 28px 0px;
+    position: absolute;
+    top: 307px;
+  }
+}
+  
+  /* A que nos dedicamos titulo*/
+  .what-we-do__title {
+    @include subtitle();
+  }
+  
+  @media only screen and (min-width: 767.98px) and (max-width:1199.98px){
+
+    .what-we-do{
+      display: none;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 479.98px) and (max-width:767.97px){
+
+    .what-we-do{
+      display: none;
+    }
+
+  }
+  
+  

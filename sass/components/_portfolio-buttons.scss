@@ -1,0 +1,59 @@
+@import '../utils/variables';
+
+
+/*Botones portafolio*/
+.filter-list {
+    @include display2();
+    flex-direction: row;
+    gap: 15px;
+    padding: 94px 495px 0px 495px;
+
+      /*Botones portafolio*/
+  &__button {
+    background: $gray-1;
+    color: $second-color;
+    border-radius: 4px;
+    width: 120px;
+    height: 38px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+    border: none;
+    margin-bottom: 50px;
+  }
+  
+  /*Botones portafolio*/
+  &__button:hover {
+    color: $primary-white-color;
+    background: $main-color;  
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+  
+@media only screen and (min-width: 767.98px) and (max-width:1199.98px){
+
+  .filter-list{
+    gap: 8px;
+    padding: 60px 126px 0px 126px;
+  }
+
+  .filter-list__button{
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 479.98px) and (max-width:767.97px){
+
+  .filter-list{
+    gap: 8px;
+    padding: 60px 80px 40px 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .filter-list__button{
+    margin-bottom: 15px;
+  }
+}

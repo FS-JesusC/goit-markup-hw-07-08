@@ -1,0 +1,177 @@
+@import '../utils/variables';
+
+
+/* Titulo Formulario ventana modal */
+.backdrop__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 5px;
+    color: $second-color;
+  }
+  
+  /* Formulario ventana modal */
+  .form-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 12px 43px;
+    position: relative;
+
+     /* labels Formulario ventana modal */
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $third-color;
+    margin-top: 10px;
+  }
+  
+  /* Formulario ventana modal inputs */
+  &__input {
+    width: 445px;
+    height: 40px;
+    margin: 4px 0px 10px 0px;
+    border: 1px solid $border-form;
+    border-radius: 4px;
+    padding-left: 40px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+  
+  /* Formulario ventana modal textarea */
+  &__textarea {
+    width: 445px;
+    height: 70px;
+    border: 1px solid $border-form;
+    border-radius: 4px;
+    margin-top: 4px;
+    resize: none;
+    cursor: pointer;
+    padding: 16px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+    /* Formulario ventana modal checkbox */
+    &__checkbox {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        margin: 2px;
+        padding: 2px;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: $third-color;
+        margin-top: 20px;
+      }
+      
+      /* Formulario ventana modal checkbox */
+      &__input2 {
+        margin: 5px;
+      }
+      
+      /* Formulario ventana modal checkbox */
+      &__button {
+        width: 200px;
+        height: 50px;
+        margin-left: 130px;
+        border-radius: 4px;
+        background: $main-color;
+        color: $primary-white-color;
+        border: solid 2px transparent;
+        letter-spacing: 0.06em;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.87;
+        margin-top: 0px;
+        cursor: pointer;
+      }
+      
+      /* Formulario ventana modal boton */
+      .form-modal__button:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        background: $accent-color-hover;
+      }
+}
+  
+  /* Formulario ventana modal textarea, input */
+  .form-modal__textarea:focus,
+  .form-modal__textarea:hover,
+  .form-modal__input:hover,
+  .form-modal__input:focus {
+    border: 1px solid $main-color;
+  }
+  
+
+  /*Formulario ventana modal SVG input*/
+  .form-modal-svg {
+    position: relative;
+    
+      /*Formulario ventana modal SVG input*/
+  &__icon{
+    position: absolute;
+    top: 17px;
+    left: 12px;
+    fill: $second-color;
+  }
+}
+  
+  /*Formulario ventana modal SVG input*/
+  .form-modal-svg:hover  .form-modal-svg__icon,
+  .form-modal-svg:focus  .form-modal-svg__icon{
+    fill: $main-color;
+  }
+  
+  @media only screen and (min-width: 767.98px) and (max-width:1199.98px){
+
+   
+    .backdrop__title {
+      width: 370px;
+      margin-left: 40px;
+    }
+
+    .form-modal__input{
+      width: 370px;
+      height: 40px;
+    }
+
+    .form-modal__textarea{
+      width: 370px;
+    }
+
+    .form-modal__button{
+      margin-left: 75px;
+      margin-top: 30px;
+    }
+  }
+
+  @media only screen and (min-width: 479.98px) and (max-width:767.97px){
+
+    .backdrop__title {
+      width: 370px;
+      margin-left: 40px;
+    }
+
+    .form-modal__input{
+      width: 370px;
+      height: 40px;
+    }
+
+    .form-modal__textarea{
+      width: 370px;
+    }
+
+    .form-modal__button{
+      margin-left: 75px;
+      margin-top: 30px;
+    }
+
+  }

@@ -1,0 +1,258 @@
+@import '../utils/variables';
+
+
+/*Encabezado barra de navegación superior */
+.navbar {
+    height: 80px;
+    line-height: 1.14;
+    border-bottom: solid 1px #f5f4fa;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__webstudio{
+        color: $main-color;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+        font-family: 'Raleway';
+      }
+      
+      &__link{
+        margin-left: 50px;
+        color: $second-color;
+        font-weight: 500;
+        line-height: 1.14;
+      }
+  }
+  
+  .navbar-menu,
+  .navbar-section {
+    @include display();
+  }
+  
+  .navbar-section__item {
+    margin-left: 50px;
+    color: $third-color;
+    line-height: 1.14;
+    font-weight: 500;
+    @extend .navbar-menu;
+  }
+  
+  .navbar-section__icon {
+    fill: $third-color;
+    margin-right: 7px;
+  }
+  
+  .navbar__link:hover,
+  .navbar__link:focus,
+  .navbar-section__item:hover,
+  .navbar-section__item:focus,
+  .navar-section__content:hover .navbar-section__icon,
+  .navbar-section__icon:focus{
+    color: $main-color;
+    fill: $main-color;
+  }
+  
+  .navbar__webstudio:hover::after {
+    @include navbarBefore();
+    left: 12%;
+  }
+  
+  .navbar__link:hover::after{
+    @include navbarBefore();
+    margin-left: 50px;
+  }
+
+  .navbar-section__item:hover::after{
+    @include navbarBefore();
+    margin-left: 20px;
+  }
+  
+
+
+  // Menu movil
+
+  .menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    position: absolute;
+    top: 10px;
+    left: 89%;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle:hover svg{
+  fill: $main-color;
+}
+
+.menu-toggle__x{
+  fill: $second-color;
+  cursor: pointer;
+}
+
+.menu-toggle__x:hover{
+  fill: $main-color;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;	
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: $primary-white-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+
+.mobile-menu{
+  padding: 48px 301px 226px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__link{
+    color: $second-color;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+  }
+
+  &__link:hover{
+    color: $accent-color-hover;
+  }
+}
+
+.mobile-menu-item{
+  padding: 0px 57px 64px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__item1{
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: $accent-color-hover;
+  }
+
+  &__item2{
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.mobile-menu-social-media{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 40px;
+
+
+  &__link{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $main-color;
+  }
+
+  span{
+    color: $primary-text-color;
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+  @media only screen and (min-width: 767.98px) and (max-width:1199.98px){
+
+    .navbar{
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+    .navbar-section{
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .navbar__webstudio span{
+      color: $black-1;
+    }
+  }
+
+  @media only screen and (min-width: 479.98px) and (max-width:767.97px){
+
+    .navbar{
+      padding-top: 16px;
+      margin-bottom: -16px;
+    }
+
+    .navbar__webstudio{
+      font-size: 24px;
+      position: absolute;
+      top: 16px;
+      left: 15px;
+    }
+
+    .navbar__webstudio span{
+      color: $black-1;
+    }
+    .navbar__link,
+    .navbar-section{
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 767.98px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+
+  
+  
+  
